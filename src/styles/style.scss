@@ -1,32 +1,7 @@
+@import "variable", "mixin", "base";
+
+// modules
+@import "modules/Chapter1";
+
+// keyframes
 @import "keyframes/Top";
-
-.App {
-  text-align: center;
-  .App-logo {
-    animation: App-logo-spin infinite 2s ease;
-    height: 40vmin;
-    pointer-events: none;
-  }
-
-  .App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
-
-  .App-link {
-    color: #61dafb;
-  }
-}
-
-.hoge {
-  animation-name: App-logo-spin;
-  animation-duration: 2s;
-  animation-timing-function: ease;
-  animation-iteration-count: 1;
-}

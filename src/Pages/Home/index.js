@@ -1,20 +1,7 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { overwriteChapter } from "ducks";
+import { useEnhance } from "./enhance"
 
-const useEnhance = () => {
-    const dispatch = useDispatch();
-    const chapterSelector = state => state.chapter;
-
-    const chapter = useSelector(chapterSelector)
-
-    const setChapter = n => dispatch(overwriteChapter(n));
-
-    return {
-        chapter,
-        setChapter
-    }
-}
+import Chapter1 from "Components/Chapter1"
 
 export default () => {
     const {chapter, setChapter} = useEnhance();
@@ -27,9 +14,3 @@ export default () => {
     }
 
 }
-
-const Chapter1 = ({ nextChapter }) => (
-  <div onAnimationEnd={() => nextChapter()}>
-    <p className="hoge"> hogheog</p>
-  </div>
-);
