@@ -1,9 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-
+import HAPPY_BIRTHDAY_GINKO from 'HAPPY_BIRTHDAY_GINKO';
 import * as serviceWorker from './serviceWorker';
+import { Provider} from "react-redux"
+import configureStore from "store";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const store = configureStore();
+
+ReactDOM.render(
+  <Provider store={store}>
+    <HAPPY_BIRTHDAY_GINKO />
+  </Provider>,
+  document.getElementById("root")
+);
 
 serviceWorker.register();
