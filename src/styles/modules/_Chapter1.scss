@@ -5,15 +5,99 @@
   width: 100%;
   height: 100%;
 
+  background-color: #fbeaf3;
   background-image: url("../../Assets/background1.png");
   background-size: 70px;
 
-  .chapter1__load-icon {
+  img {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     margin: auto;
+  }
+
+  .chapter1__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+
+    .inner {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: calc(100% - 40px);
+      height: calc(100% - 40px);
+      background-color: $theme-light-pink;
+      background-image: url("../../Assets/background1.png");
+      background-size: 70px;
+      transform: rotate(-2deg);
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        width: calc(100% - 40px);
+        height: calc(100% - 40px);
+        box-sizing: border-box;
+        border: dashed 2px #000;
+      }
+
+      div {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          background-color: #000;
+        }
+        &::before {
+          width: 100%;
+          height: 4px;
+        }
+        &::after {
+          width: 4px;
+          height: 100%;
+        }
+      }
+      div:nth-child(1) {
+        top: 20px;
+        left: 20px;
+      }
+      div:nth-child(2) {
+        top: 20px;
+        right: 20px;
+        &::after {
+          right: 0;
+        }
+      }
+      div:nth-child(3) {
+        bottom: 20px;
+        left: 20px;
+        &::before {
+          bottom: 0;
+        }
+      }
+      div:nth-child(4) {
+        bottom: 20px;
+        right: 20px;
+        &::before {
+          bottom: 0;
+        }
+        &::after {
+          right: 0;
+        }
+      }
+    }
   }
 }
