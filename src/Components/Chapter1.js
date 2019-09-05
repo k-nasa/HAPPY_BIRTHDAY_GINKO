@@ -7,7 +7,11 @@ export default ({ nextChapter }) => (
     <LoadView />
     <Curtain />
 
-    <div className="end" onAnimationEnd={() => nextChapter()} />
+    <div
+      className="end"
+      onAnimationStart={() => console.log("start chapter2")}
+      onAnimationEnd={() => nextChapter()}
+    />
   </div>
 );
 
