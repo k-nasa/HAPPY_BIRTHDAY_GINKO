@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import "styles/style.scss";
 import Home from "./Pages/Home";
 
 const About = () => <p>このサイトについて</p>;
