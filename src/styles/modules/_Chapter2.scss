@@ -46,10 +46,11 @@
     margin: auto;
 
     @include sp {
-      width: 70%;
+      width: 100%;
     }
     @include pc {
-      width: 50%;
+      width: 70%;
+      height: 70%;
     }
   }
 
@@ -223,6 +224,7 @@
       animation: top__down-snow-2 8s linear 2.8s infinite;
     }
   }
+
 .top__four-corners {
     span:nth-child(1) { animation: top__show-block-2 1s ease-out 1s forwards; }
     span:nth-child(2) { animation: top__show-block-4 1s ease-out 1s forwards; }
