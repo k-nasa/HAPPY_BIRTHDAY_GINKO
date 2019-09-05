@@ -1,8 +1,8 @@
 @keyframes load-icon_rotate {
-  0% {
+  to {
     transform: rotateY(0deg);
   }
-  100% {
+  from {
     transform: rotateY(360deg);
   }
 }
@@ -19,14 +19,5 @@
   }
   100% {
     transform: scale(0.8);
-  }
-}
-
-@keyframes slide-right {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0%);
   }
 }

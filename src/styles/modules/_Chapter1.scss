@@ -4,8 +4,9 @@
   left: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 
-  background-color: #fbeaf3;
+  background-color: $theme-light-pink;
   background-image: url("../../Assets/background1.png");
   background-size: 70px;
 
@@ -75,21 +76,39 @@
       }
     }
   }
+  .chapter1__curtain {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    display: flex;
+
+    div {
+      position: relative;
+      width: 50%;
+      height: 100%;
+    }
+
+    div:nth-child(1) {
+      background-color: $theme-light-pink;
+      background-image: url("../../Assets/background1.png");
+      background-size: 100px;
+      transform: translateY(-100%);
+    }
+
+    div:nth-child(2) {
+      background-color: $theme-light-blue;
+      background-size: 100px;
+      transform: translateY(100%);
+      background-image: url("../../Assets/background2.png");
+    }
+  }
 }
 
+// animation
+
 .chapter1 {
-  animation-name: fadeout;
-  animation-timing-function: ease;
-  animation-duration: 1s;
-  animation-delay: 1.7s;
-  animation-fill-mode: forwards;
-
-  // ReactでonAnimationEndを使うために必要
-  // ホントは消したい
-  .end {
-    animation: dummy 0.5s ease 2s forwards;
-  }
-
   .chapter1__load-view {
     .progress-bar div {
       animation-name: slide-right;
@@ -103,5 +122,33 @@
       animation-duration: 1s;
       animation-iteration-count: infinite;
     }
+  }
+
+  .chapter1__curtain {
+    animation-name: rotate360;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+
+    div:nth-child(1) {
+      animation-name: slide-top;
+      animation-duration: 1s;
+      animation-timing-function: ease;
+      animation-delay: 2s;
+      animation-fill-mode: forwards;
+    }
+
+    div:nth-child(2) {
+      animation-name: slide-bottom;
+      animation-duration: 1s;
+      animation-timing-function: ease;
+      animation-delay: 2s;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  .end {
+    animation: 0s dummy 4.1s ease;
   }
 }

@@ -5,6 +5,8 @@ export default ({ nextChapter }) => (
   <div className="chapter1">
     <Bg />
     <LoadView />
+    <Curtain />
+
     <div className="end" onAnimationEnd={() => nextChapter()} />
   </div>
 );
@@ -26,5 +28,12 @@ const LoadView = () => (
     <div className="progress-bar">
       <div />
     </div>
+  </div>
+);
+
+const Curtain = () => (
+  <div className="chapter1__curtain">
+    <div />
+    <div />
   </div>
 );
