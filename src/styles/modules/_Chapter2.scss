@@ -169,21 +169,21 @@
   }
 
   .top__nav {
+    opacity: 0;
     a {
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        background-color: #0796FE;
-        padding: 10px;
-        margin: 10%;
-        color: white;
-        font-size: 36px;
-        text-decoration: none;
-        border-radius: 30px;
+      position: absolute;
+      top: 70%;
+      background-color: #0796fe;
+      padding: 10px;
+      margin: 10%;
+      color: white;
+      font-size: 36px;
+      text-decoration: none;
+      border-radius: 30px;
 
-    @include sp {
+      @include sp {
         font-size: 14px;
-    }
+      }
     }
   }
 }
@@ -255,6 +255,30 @@
     }
     span:nth-child(4) {
       animation: top__show-block-3 1s ease-out 1s forwards;
+    }
+  }
+
+  @keyframes load-icon_jump {
+    0% {
+      transform: scale(0.8);
+    }
+    30% {
+      transform: scale(1.1);
+    }
+    60% {
+      transform: scale(0.8);
+    }
+    100% {
+      transform: scale(0.8);
+    }
+  }
+
+  .top__nav {
+    animation: fadein 2s ease 2s forwards;
+
+    a {
+      animation: load-icon_jump 1s ease 2s forwards;
+      animation-iteration-count: 3;
     }
   }
 }
