@@ -49,3 +49,20 @@
     transform: translateY(100vh) rotateX(-60deg) rotateY(-220deg);
   }
 }
+
+@keyframes top__show-block-1 {
+    from { transform: translate(-100%, -100%); }
+    to   { transform: translate(0%, 0%); }
+  }
+  @keyframes top__show-block-2 {
+    from { transform: translate(100%, -100%); }
+    to   { transform: translate(0%, 0%); }
+  }
+  @keyframes top__show-block-3 {
+    from { transform: translate(-100%, 100%); }
+    to   { transform: translate(0%, 0%); }
+  }
+  @keyframes top__show-block-4 {
+    from { transform: translate(100%, 100%); }
+    to   { transform: translate(0%, 0%); }
+  }

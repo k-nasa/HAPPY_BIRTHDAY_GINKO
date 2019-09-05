@@ -4,19 +4,33 @@ import HappyBirthdayGinko from "Assets/HBG.svg";
 export default ({ nextChapter }) => (
   <div className="chapter2">
     <Curtain />
-    <img
-      className="site-main"
-      src={HappyBirthdayGinko}
-      alt="Happy Birthday Ginko"
-    />
+    <FourCorners />
+    <SiteMainImg />
     <Snows />
   </div>
+);
+
+const SiteMainImg = () => (
+  <img
+    className="site-main"
+    src={HappyBirthdayGinko}
+    alt="Happy Birthday Ginko"
+  />
 );
 
 const Curtain = () => (
   <div className="chapter2__curtain">
     <div />
     <div />
+  </div>
+);
+
+const FourCorners = () => (
+  <div className="top__four-corners">
+    <span />
+    <span />
+    <span />
+    <span />
   </div>
 );
 
