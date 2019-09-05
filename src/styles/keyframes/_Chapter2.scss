@@ -17,33 +17,35 @@
 
 @keyframes top__down-snow-1 {
   from {
-    transform: translateY(calc(-100vh + -30vmin)) rotateY(0deg);
+    transform: translateY(-30vh) rotateY(0deg);
+    opacity: 0;
   }
   to {
-    transform: translateY(0) rotateX(0deg) rotateX(220deg) rotateY(60deg);
+    transform: translateY(100vh) rotateX(0deg) rotateX(220deg) rotateY(60deg);
+    opacity: 1;
   }
 }
 @keyframes top__down-snow-2 {
   from {
-    transform: translateY(calc(-100vh + -30vmin)) rotateX(0deg) rotateY(0deg);
+    transform: translateY(-30vh) rotateX(0deg) rotateY(0deg);
   }
   to {
-    transform: translateY(0) rotateX(60deg) rotateY(220deg);
+    transform: translateY(100vh) rotateX(60deg) rotateY(220deg);
   }
 }
 @keyframes top__down-snow-3 {
   from {
-    transform: translateY(calc(-100vh + -30vmin)) rotateX(0deg) rotateY(0deg);
+    transform: translateY(-30vh) rotateX(0deg) rotateY(0deg);
   }
   to {
-    transform: translateY(0) rotateX(-220deg) rotateY(-60deg);
+    transform: translateY(100vh) rotateX(-220deg) rotateY(-60deg);
   }
 }
 @keyframes top__down-snow-4 {
   from {
-    transform: translateY(calc(-100vh + -30vmin)) rotateX(0deg) rotateY(0deg);
+    transform: translateY(-30vh) rotateX(0deg) rotateY(0deg);
   }
   to {
-    transform: translateY(0) rotateX(-60deg) rotateY(-220deg);
+    transform: translateY(100vh) rotateX(-60deg) rotateY(-220deg);
   }
 }
